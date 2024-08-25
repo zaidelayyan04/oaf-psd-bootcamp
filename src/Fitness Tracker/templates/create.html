@@ -1,0 +1,23 @@
+<form method="POST">
+    <label for="workout_name">Workout Name:</label>
+    <input type="text" id="workout_name" name="workout_name">
+
+    <div id="exercise-container">
+        <div class="exercise">
+            <label for="exercise_name">Exercise:</label>
+            <input type="text" name="exercise_name" placeholder="Exercise name">
+
+            <label for="sets">Sets:</label>
+            <input type="number" name="sets" placeholder="Sets">
+
+            <label for="reps">Reps:</label>
+            <input type="number" name="reps" placeholder="Reps">
+
+            <label for="weight">Weight:</label>
+            <input type="number" name="weight" placeholder="Weight">
+        </div>
+    </div>
+
+    <button type="button" onclick="addExercise()">Add Another Exercise</button>
+    <button type="submit">Save Workout</button>
+</form>
