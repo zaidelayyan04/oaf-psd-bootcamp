@@ -1,0 +1,15 @@
+Summary of Context
+The goal is to build a simple fitness tracker to log workouts. The main purpose is to track fitness progression by tracking reps, sets, and weights.
+
+Data Source:
+Input: User enters workout data such as exercises, reps, sets, and weights.
+
+Data Storage:
+The data is stored locally using SQLite. 
+Schema used to create database.db file that has tables for workout data.
+
+Data Utilization: 
+Users can view all previously entered workouts.
+Users can edit or delete any previous post.
+
+
