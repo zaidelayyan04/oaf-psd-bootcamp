@@ -1,8 +1,7 @@
-# sqlite_storage.py
 import sqlite3
 from abstract_storage import AbstractFitnessStorage
 
-class SQLiteFitnessStorage(AbstractFitnessStorage):
+class FitnessStorage(AbstractFitnessStorage):
     def __init__(self, db_path='database.db'):
         self.db_path = db_path
 
