@@ -24,7 +24,7 @@ def create():
 def edit(post_id):
     return handler.edit(post_id)
 
-@app.route('/delete/<int:post_id>')
+@app.route('/delete/<int:post_id>', methods=['POST'])
 def delete(post_id):
     return handler.delete(post_id)
 
