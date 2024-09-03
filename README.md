@@ -1,3 +1,4 @@
+
 **Motivation**
 The motivation behind this project was to create a fitness tracker application that allowed users to log and manage their workouts. The main goal was to provide this tool to track fitness progress and personalized workout routines.
 
