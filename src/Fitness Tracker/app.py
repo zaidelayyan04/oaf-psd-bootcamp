@@ -1,4 +1,3 @@
-# app.py
 from flask import Flask
 from fitness_handler import FitnessHandler
 from fitness_storage import FitnessStorage 
@@ -8,9 +7,13 @@ from memory_storage import MemoryStorage
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'  
 
+
 memory = MemoryStorage()
-storage = FitnessStorage('database.db') 
-handler = FitnessHandler(storage)
+storage = FitnessStorage()
+# switch service parameters between memory and storage which manually changes if you want to use memory
+# or sqlite3 storage
+service = FitnessService(storage) 
+handler = FitnessHandler(service)
 
 @app.route('/')
 def index():
