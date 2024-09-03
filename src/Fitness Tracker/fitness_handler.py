@@ -1,7 +1,6 @@
 from flask import render_template, request, flash, redirect, url_for
 from werkzeug.exceptions import abort
 from fitness_service import FitnessService
-from fitness_storage import FitnessStorage  
 
 class FitnessHandler:
     def __init__(self, storage):

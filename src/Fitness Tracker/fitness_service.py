@@ -1,4 +1,3 @@
-# fitness_service.py
 from abstract_storage import AbstractFitnessStorage
 
 class FitnessService:
