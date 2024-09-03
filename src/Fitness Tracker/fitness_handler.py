@@ -1,10 +1,9 @@
 from flask import render_template, request, flash, redirect, url_for
 from werkzeug.exceptions import abort
-from fitness_service import FitnessService
 
 class FitnessHandler:
-    def __init__(self, storage):
-        self.post_service = FitnessService(storage)
+    def __init__(self, service):
+        self.post_service = service
 
     def index(self):
         posts = self.post_service.get_all_posts()
@@ -48,5 +47,3 @@ class FitnessHandler:
         self.post_service.delete_post(post_id)
         flash('"{}" was successfully deleted!'.format(post['title']))
         return redirect(url_for('index'))
-    
-    

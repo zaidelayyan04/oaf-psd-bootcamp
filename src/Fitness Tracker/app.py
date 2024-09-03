@@ -1,19 +1,12 @@
 from flask import Flask
-from fitness_handler import FitnessHandler
-from fitness_storage import FitnessStorage 
-from fitness_service import FitnessService
-from memory_storage import MemoryStorage
+from fitness_factory import ConcreteFitnessFactory
 
 app = Flask(__name__)
-app.secret_key = 'your_secret_key'  
+app.secret_key = 'dog'
 
-
-memory = MemoryStorage()
-storage = FitnessStorage()
-# switch service parameters between memory and storage which manually changes if you want to use memory
-# or sqlite3 storage
-service = FitnessService(storage) 
-handler = FitnessHandler(service)
+# True for use_memory storage and false for sqlite3 storage
+service = ConcreteFitnessFactory(use_memory=False)  
+handler = service.create_handler()
 
 @app.route('/')
 def index():
